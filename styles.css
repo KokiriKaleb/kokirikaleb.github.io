@@ -118,7 +118,7 @@ a:hover {
 
 }
 
-.responsive {
+.project-card {
   display: flex;
   align-items: center;
   width: 475px;
@@ -324,7 +324,7 @@ footer p {
     width: 70%;
   }
 
-  .responsive {
+  .project-card{
     width: 100%;
   }
 
