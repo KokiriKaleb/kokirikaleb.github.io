@@ -170,24 +170,71 @@ div.desc {
   border-bottom: 2px solid #BB86FC;
 }
 
-.skills {
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
-  align-items: center;
+/* === START: New and Improved Skills Section Styles === */
+
+.skills-container {
+  /* This is the main wrapper for all your skill categories */
   width: 100%;
-  margin-bottom: 15px;
+  max-width: 1200px; /* Constrains the width on very large screens */
+  margin: 40px auto;  /* Adds space above/below and centers the container */
+  padding: 0 20px;    /* Prevents content from touching screen edges */
 }
 
-.skills-list {
-  margin-left: 2%;
+.skill-category {
+  /* This holds each category (e.g., Languages, Tools) */
+  margin-bottom: 50px; /* Space between categories */
 }
 
-.skills img {
-  max-width: 200px;
-  max-height: 200px;
+.skill-category h3 {
+  /* Styling for the category titles like "Languages" */
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  /* Using your site's brand color for consistency! */
+  border-bottom: 2px solid #BB86FC;
 }
 
+.skill-logos {
+  /* This is the flex container for the logos themselves */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers the logos in the container */
+  align-items: flex-start;
+  gap: 35px 45px; /* Adds vertical and horizontal space between items */
+}
+
+.skill-item {
+  /* This styles each individual logo + text pair */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px; /* Gives each item a consistent width */
+  text-align: center;
+}
+
+.skill-item img {
+  /* I've set a uniform height. With many logos, this creates a much cleaner
+     and more organized grid than the previous max-width: 200px. */
+  height: 65px;
+  margin-bottom: 12px;
+  object-fit: contain; /* Prevents logos from stretching or squishing */
+}
+
+.skill-item p {
+  margin: 0;
+  font-size: 1rem;
+  /* Using a light gray for readability on a dark background */
+  color: #ccc;
+}
+
+/* This helps the black GitHub logo show up on your dark background */
+.skill-item img[alt="GitHub Logo"] {
+  filter: invert(1);
+}
+
+
+/* === END: New Skills Section Styles === */
 .academic {
   font-size: 1rem;
 }
